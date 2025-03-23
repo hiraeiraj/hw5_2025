@@ -1,0 +1,175 @@
+/* Q1: 
+Animating the keyframes Logo so that it expands in width when the page loads*/
+
+#logo {
+    animation: mymove 5s;
+}
+
+@keyframes mymove {
+    from {width: 25px;
+    opacity: 0;}
+    to {width: 475px;
+    opacity: 1;}
+}
+
+/* Q2:
+Editing the font and background image*/
+body {
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+
+}
+
+/* Q3:
+Editing the header so that it is centered in the page vertically*/
+header {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Q4: Editing the nav_links so that they are centered in the page in a column */
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/*Q5: Editing the link color to stay the same even after it has been visited*/
+.nav_item a:visited {
+    color: blue;
+  }
+
+
+
+
+/*Q6: Styling the header elements that are direct children of the cards to have blue rounded borders*/
+.card > header {
+    background-color: #288088;
+    border: solid 2px #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+
+/*Styling the card class to make the rounding unanimous*/
+/*Q7: Styling the cards with flex*/
+
+.card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: column;
+}
+
+
+/*Q8: */
+.pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/*Q9: */
+.gallery > img {
+    border: solid 10px #50c7c7;
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+
+   
+}
+/*Q10: */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* screen size greater than 900px */
+
+
+@media all and (min-width: 900px) {
+    /*Q11: Styled logo to be at the left of the page and the nav links to be on the right of the page*/
+    header {
+        justify-content: space-between;
+        flex-direction: row;
+        flex-basis: none;
+    }
+
+    .nav_links {
+        flex-direction: row;
+    }
+
+    /*Q12:*/
+
+    .pricing {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        flex-basis: 275px;
+    }
+
+
+    /*Q13: Fixing the header to the top of the page */
+
+}
+
+/*Q14:*/
+@media (prefers-reduced-motion: reduce) {
+    .logo {
+        animation: none
+    }
+}
+
+
+
+
+@media print {
+
+    /*Q15 and Q16*/
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+
+    .pricing {
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        width: 100%;
+
+    }
+    .nav_links{
+        width: 100%;
+        justify-content: stretch;
+    }
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+
+    #gallery, .gallery {
+        display: none;
+    }
+
+    .card ul li:nth-child(2):after{
+        content: "👍"
+    }
+
+
+}
+
