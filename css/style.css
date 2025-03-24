@@ -134,13 +134,11 @@ header {
 }
 
 /*Q14:*/
-@media (prefers-reduced-motion: reduce) {
-    .logo {
+@media (prefers-reduced-motion:reduce) {
+    #logo {
         animation: none
     }
 }
-
-
 
 
 @media print {
