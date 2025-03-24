@@ -127,6 +127,10 @@ header {
 
     /*Q13: Fixing the header to the top of the page */
 
+    header {position: fixed;
+    width: 100%;}
+    .card header {position: static;}
+
 }
 
 /*Q14:*/
@@ -146,26 +150,30 @@ header {
         font-family: Arial, Helvetica;
         background-image: none;
     }
+    /*Q17*/
 
+     .nav_links {
+        justify-content: space-between;
+        flex: 1;
+     }
+
+    /*Q18*/
     .pricing {
         justify-content: flex-end;
         flex-wrap: nowrap;
         width: 100%;
 
     }
-    .nav_links{
-        width: 100%;
-        justify-content: stretch;
-    }
+    /*Q19*/
     .card {
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
-
+    /*Q20*/
     #gallery, .gallery {
         display: none;
     }
-
+    /*Q21*/
     .card ul li:nth-child(2):after{
         content: "👍"
     }
