@@ -60,7 +60,7 @@ header {
 
 
 /*Styling the card class to make the rounding unanimous*/
-/*Q7: Styling the cards with flex*/
+/*Q7: Styling the cards with flex so that they all have the same width*/
 
 .card {
     border-top-left-radius: 50px;
@@ -71,14 +71,14 @@ header {
 }
 
 
-/*Q8: */
+/*Q8: Using flex to center the pricing cards centered vertically and horizontally*/
 .pricing {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
-/*Q9: */
+/*Q9: Styling the images in the gallery class */
 .gallery > img {
     border: solid 10px #50c7c7;
     margin: 10px;
@@ -87,7 +87,7 @@ header {
 
    
 }
-/*Q10: */
+/*Q10: Editing the gallery to have flex-wrap*/
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -113,7 +113,7 @@ header {
         flex-direction: row;
     }
 
-    /*Q12:*/
+    /*Q12: Styling the pricing and card class to have a narrower width*/
 
     .pricing {
         flex-direction: row;
@@ -125,7 +125,7 @@ header {
     }
 
 
-    /*Q13: Fixing the header to the top of the page */
+    /*Q13: Fixing the header to the top of the page so that it stays there even when scrolling down*/
 
     header {position: fixed;
     width: 100%;}
@@ -133,8 +133,8 @@ header {
 
 }
 
-/*Q14:*/
-@media (prefers-reduced-motion:reduce) {
+/*Q14: The logo won't be animated if the user has prefer-reduced-motion on*/
+@media (prefers-reduced-motion){
     #logo {
         animation: none
     }
@@ -143,35 +143,42 @@ header {
 
 @media print {
 
-    /*Q15 and Q16*/
+    /*Q15 and Q16: Changing the font and removing the background image when entering print view*/
     body {
         font-family: Arial, Helvetica;
         background-image: none;
     }
-    /*Q17*/
+    /*Q17: Editing the nav links so that they take up the width of the page and are equally spaced*/
 
+    nav{
+        width: 100%;
+    }
      .nav_links {
-        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
         flex: 1;
+ 
      }
 
-    /*Q18*/
+    /*Q18: Editing the pricing class so that the elements are aligned along the bottom*/
     .pricing {
         justify-content: flex-end;
         flex-wrap: nowrap;
         width: 100%;
+        align-items: flex-end;
 
     }
-    /*Q19*/
+    /*Q19: Styling the card elements*/
     .card {
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
-    /*Q20*/
+    /*Q20: Hiding the gallery*/
     #gallery, .gallery {
         display: none;
     }
-    /*Q21*/
+    /*Q21: Adding a thumbs up in the card*/
     .card ul li:nth-child(2):after{
         content: "👍"
     }
